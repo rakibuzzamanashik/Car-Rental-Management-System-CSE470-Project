@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="supercarModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="carReg">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Car Number" Type="varchar" MaxLength="50" />
+    <Property Name="Model" Type="varchar" MaxLength="50" />
+    <Property Name="Availability" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="customer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Mobile" Type="int" />
+    <Property Name="Address" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="rental">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="carid" Type="varchar" MaxLength="50" />
+    <Property Name="custid" Type="int" />
+    <Property Name="fee" Type="int" />
+    <Property Name="sdate" Type="date" />
+    <Property Name="edate" Type="date" />
+  </EntityType>
+  <EntityType Name="returncar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="carno" Type="varbinary" MaxLength="50" />
+    <Property Name="custid" Type="int" />
+    <Property Name="date" Type="date" />
+    <Property Name="elsp" Type="int" />
+    <Property Name="fine" Type="int" />
+  </EntityType>
+  <EntityContainer Name="supercarModelStoreContainer">
+    <EntitySet Name="carReg" EntityType="Self.carReg" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="customer" EntityType="Self.customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="rental" EntityType="Self.rental" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="returncar" EntityType="Self.returncar" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

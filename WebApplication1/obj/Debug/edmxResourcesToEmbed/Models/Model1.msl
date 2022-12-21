@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="supercarModelStoreContainer" CdmEntityContainer="supercarEntities">
+    <EntitySetMapping Name="carRegs">
+      <EntityTypeMapping TypeName="supercarModel.carReg">
+        <MappingFragment StoreEntitySet="carReg">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Car_Number" ColumnName="Car Number" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Availability" ColumnName="Availability" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="customers">
+      <EntityTypeMapping TypeName="supercarModel.customer">
+        <MappingFragment StoreEntitySet="customer">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rentals">
+      <EntityTypeMapping TypeName="supercarModel.rental">
+        <MappingFragment StoreEntitySet="rental">
+          <ScalarProperty Name="edate" ColumnName="edate" />
+          <ScalarProperty Name="sdate" ColumnName="sdate" />
+          <ScalarProperty Name="fee" ColumnName="fee" />
+          <ScalarProperty Name="custid" ColumnName="custid" />
+          <ScalarProperty Name="carid" ColumnName="carid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="returncars">
+      <EntityTypeMapping TypeName="supercarModel.returncar">
+        <MappingFragment StoreEntitySet="returncar">
+          <ScalarProperty Name="fine" ColumnName="fine" />
+          <ScalarProperty Name="elsp" ColumnName="elsp" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="custid" ColumnName="custid" />
+          <ScalarProperty Name="carno" ColumnName="carno" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
